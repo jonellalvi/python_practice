@@ -20,8 +20,10 @@ stocks = {}
 for item in test_data:
     if item[1] not in stocks:
         stocks[item[1]] = [item]
+        del item[1]
     else:
         stocks[item[1]].append(item)
+        del item[1]
 
 pprint(stocks)
 

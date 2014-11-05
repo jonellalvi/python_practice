@@ -1,6 +1,10 @@
 #create an empty list
 shopping_list = []
 
+#clear items from the list
+def clear_all():
+    del shopping_list[:]
+
 
 #move items in the list
 def move_item(old_idx, new_idx):
@@ -56,6 +60,9 @@ while True:
         show_list()
         idx = input("Which item? Tell me the number: ")
         remove_item(int(idx))
+        continue
+    elif new_stuff == "CLEAR":
+        clear_all()
         continue
     elif new_stuff == "MOVE":
         show_list()
